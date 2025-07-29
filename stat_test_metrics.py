@@ -16,7 +16,7 @@ def count_test_cases(test_dir):
             if f.endswith('.java'):
                 count += 1
     return count
-
+ 
 def run_maven_cmd(cmd):
     result = subprocess.run(cmd, cwd=project_root, shell=True, capture_output=True, text=True)
     return result.returncode, result.stdout + result.stderr
